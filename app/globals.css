@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background-50: 0.05 0 0;
+    --background-100: 0.08 0 0;
+    --background-200: 0.12 0 0;
+    --background-300: 0.18 0 0;
+    --background-400: 0.25 0 0;
+    --background-500: 0.35 0 0;
+    --background-600: 0.45 0 0;
+    --background-700: 0.55 0 0;
+    --background-800: 0.65 0 0;
+    --background-900: 0.75 0 0;
+    --background-950: 0.85 0 0;
+
+    --foreground-50: 0.98 0 0;
+    --foreground-100: 0.95 0 0;
+    --foreground-200: 0.9 0 0;
+    --foreground-300: 0.85 0 0;
+    --foreground-400: 0.8 0 0;
+    --foreground-500: 0.75 0 0;
+    --foreground-600: 0.7 0 0;
+    --foreground-700: 0.65 0 0;
+    --foreground-800: 0.6 0 0;
+    --foreground-900: 0.55 0 0;
+    --foreground-950: 0.5 0 0;
+
+    --primary-50: 0.95 0.05 250;
+    --primary-100: 0.9 0.08 250;
+    --primary-200: 0.85 0.12 250;
+    --primary-300: 0.8 0.16 250;
+    --primary-400: 0.7 0.18 250;
+    --primary-500: 0.6 0.2 250;
+    --primary-600: 0.55 0.18 250;
+    --primary-700: 0.5 0.16 250;
+    --primary-800: 0.45 0.14 250;
+    --primary-900: 0.4 0.12 250;
+    --primary-950: 0.35 0.1 250;
+
+    --accent-50: 0.95 0.05 210;
+    --accent-100: 0.9 0.1 210;
+    --accent-200: 0.85 0.14 210;
+    --accent-300: 0.8 0.18 210;
+    --accent-400: 0.75 0.2 210;
+    --accent-500: 0.7 0.22 210;
+    --accent-600: 0.65 0.2 210;
+    --accent-700: 0.6 0.18 210;
+    --accent-800: 0.55 0.16 210;
+    --accent-900: 0.5 0.14 210;
+    --accent-950: 0.45 0.12 210;
+
+    --secondary-50: 0.98 0.02 260;
+    --secondary-100: 0.95 0.02 260;
+    --secondary-200: 0.9 0.04 260;
+    --secondary-300: 0.85 0.06 260;
+    --secondary-400: 0.8 0.08 260;
+    --secondary-500: 0.75 0.1 260;
+    --secondary-600: 0.7 0.1 260;
+    --secondary-700: 0.65 0.08 260;
+    --secondary-800: 0.6 0.06 260;
+    --secondary-900: 0.55 0.04 260;
+    --secondary-950: 0.5 0.02 260;
+
+    --font-heading: 'Inter', system-ui, sans-serif;
+    --font-body: 'Inter', system-ui, sans-serif;
+    --font-label: 'Inter', system-ui, sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background-color: #080808;
+    color: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(135deg, #60ccf1 0%, #3372f1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .animate-marquee {
+    animation: marquee-scroll 40s linear infinite;
+    width: max-content;
+  }
+
+  @keyframes marquee-scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes trust-scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.6; }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+
+  .animate-trust-scroll {
+    animation: trust-scroll 40s linear infinite;
+    width: max-content;
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 3s ease-in-out infinite;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+}
+
+/* Form honeypot */
+.hp-field {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
