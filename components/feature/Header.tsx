@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 
 const leftNav = [
   { label: 'About', href: '#about' },
@@ -49,13 +50,13 @@ export default function Header() {
 
           {/* Logo - Center */}
           <div className="flex-shrink-0">
-            <a href="/" className="flex items-center group">
+            <Link href="/" className="flex items-center group">
               <img
                 src="https://ericanalytics.net/images/log.png"
                 alt="Eric Analytics"
                 className="h-20 w-auto object-contain"
               />
-            </a>
+            </Link>
           </div>
 
           {/* Right Nav - Desktop */}
