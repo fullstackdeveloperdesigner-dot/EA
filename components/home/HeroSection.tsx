@@ -54,7 +54,7 @@ export default function HeroSection() {
                 loop
                 playsInline
                 className="w-full h-full object-cover"
-                src="https://ericanalytics.net/images/topvideo.mp4"
+                src="/images/eric-analytics/topvideo.mp4"
               />
             </div>
           </div>

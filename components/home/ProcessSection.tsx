@@ -49,7 +49,7 @@ export default function ProcessSection() {
           <div>
             <div className="relative">
               <img
-                src="https://ericanalytics.net/images/ds.png"
+                src="/images/eric-analytics/the-process.png"
                 alt="Data Analytics and Visualization"
                 className="relative w-full max-w-sm mx-auto md:mx-0"
                 width={371}

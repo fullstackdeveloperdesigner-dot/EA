@@ -339,12 +339,12 @@ export const features = [
 ];
 
 export const partnerLogos = [
-  { name: 'Wix', src: 'https://ericanalytics.net/images/wix-logo.png' },
-  { name: 'Google', src: 'https://ericanalytics.net/images/google-logo.png' },
-  { name: 'Microsoft', src: 'https://ericanalytics.net/images/microsoft-logo.png' },
-  { name: 'Meta', src: 'https://ericanalytics.net/images/meta-logo.png' },
-  { name: 'Shopify', src: 'https://ericanalytics.net/images/shopify-logo.png' },
-  { name: 'Magento', src: 'https://ericanalytics.net/images/magento-logo.png' },
-  { name: 'WordPress', src: 'https://ericanalytics.net/images/wordpress-logo.png' },
-  { name: 'Unbounce', src: 'https://ericanalytics.net/images/unbounce-logo.png' },
+  { name: 'Wix', src: '/images/eric-analytics/wix-logo.png' },
+  { name: 'Google', src: '/images/eric-analytics/google-logo.png' },
+  { name: 'Microsoft', src: '/images/eric-analytics/microsoft-logo.webp' },
+  { name: 'Meta', src: '/images/eric-analytics/meta-logo.webp' },
+  { name: 'Shopify', src: '/images/eric-analytics/shopify-logo.png' },
+  { name: 'Magento', src: '/images/eric-analytics/magento-logo.png' },
+  { name: 'WordPress', src: '/images/eric-analytics/wordpress-logo.png' },
+  { name: 'Unbounce', src: '/images/eric-analytics/unbounce-logo.png' },
 ];

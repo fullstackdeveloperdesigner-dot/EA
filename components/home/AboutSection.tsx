@@ -1,3 +1,7 @@
+import { useState } from 'react';
+import Image from 'next/image';
+import YouTubeVideo from '../youtube-video';
+
 const aboutStats = [
   {
     value: '10,000+',
@@ -89,12 +93,13 @@ export default function AboutSection() {
             <div className="relative">
               <div className="absolute -inset-2 bg-blue-500/5 rounded-[40px] blur-[60px]" />
               <div className="relative bg-[#111] rounded-3xl border border-white/[0.06] overflow-hidden shadow-2xl">
-                <img
-                  src="https://ericanalytics.net/images/Ideal_Partner.png"
+                {/* <img
+                  src="/images/eric-analytics/Ideal_Partner.png"
                   alt="Eric Case - Eric Analytics"
                   className="w-full h-auto object-cover"
                   loading="lazy"
-                />
+                /> */}
+                <YouTubeVideo />
               </div>
 
               {/* Top Rated Plus Badge */}

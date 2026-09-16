@@ -13,7 +13,7 @@ export default function Footer() {
       <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 py-24">
         <div className="mb-14">
           <img
-            src="https://ericanalytics.net/images/log.png"
+            src="/images/eric-analytics/logo.png"
             alt="Eric Analytics - Data Analytics Consulting Agency"
             className="h-20 w-auto object-contain"
             loading="lazy"
@@ -81,14 +81,14 @@ export default function Footer() {
         </div>
 
         {/* Copyright */}
-        <div className="mt-16 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 border-t border-white/[0.04]">
+        <div className="mt-16 pt-8 flex flex-col md:flex-row justify-center items-center gap-4 border-t border-white/[0.04]">
           <p className="text-white text-xs">
             &copy; 2026 Eric Analytics. All rights reserved.
           </p>
-          <div className="flex gap-8 text-white text-xs">
+          {/* <div className="flex gap-8 text-white text-xs">
             <span className="hover:text-white/65 cursor-pointer transition-colors">Privacy Policy</span>
             <span className="hover:text-white/65 cursor-pointer transition-colors">Terms of Service</span>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>

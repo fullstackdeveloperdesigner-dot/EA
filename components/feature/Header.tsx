@@ -52,7 +52,7 @@ export default function Header() {
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center group">
               <img
-                src="https://ericanalytics.net/images/log.png"
+                src="/images/eric-analytics/logo.png"
                 alt="Eric Analytics"
                 className="h-20 w-auto object-contain"
               />
