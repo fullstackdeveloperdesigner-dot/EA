@@ -2,19 +2,19 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Eric Analytics — Fix Broken Tracking. Scale Profitable Campaigns.',
+  title: 'Leading Data & Web Analytics Services | Eric Analytics',
   description:
     'Eric Analytics fixes tracking foundations before scaling campaigns. Specialists in GA4, Google Tag Manager, Server-Side Tracking, and Conversion Optimization for eCommerce, SaaS, and lead generation businesses.',
   icons: {
-    icon: 'https://ericanalytics.net/images/log.png',
+    icon: '/images/eric-analytics/favicon.ico',
   },
   openGraph: {
-    title: 'Eric Analytics — Fix Broken Tracking. Scale Profitable Campaigns.',
+    title: 'Leading Data & Web Analytics Services | Eric Analytics',
     description:
       'Eric Analytics fixes tracking foundations before scaling campaigns. Specialists in GA4, Google Tag Manager, Server-Side Tracking, and Conversion Optimization.',
     type: 'website',
     url: 'https://ericanalytics.net/',
-    images: ['https://ericanalytics.net/images/og-image.png'],
+    images: ['https://ericanalytics.net/images/eric-analytics/og-image.png'],
   },
 };
 
