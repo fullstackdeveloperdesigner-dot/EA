@@ -4,15 +4,15 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 const leftNav = [
-  { label: 'About', href: '#about' },
-  { label: 'Services', href: '#services' },
-  { label: 'Showcase', href: '#results' },
+  { label: 'About', id: 'about' },
+  { label: 'Services', id: 'services' },
+  { label: 'Showcase', id: 'results' },
 ];
 
 const rightNav = [
-  { label: 'Testimonials', href: '#testimonials' },
-  { label: 'FAQ', href: '#faq' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Testimonials', id: 'testimonials' },
+  { label: 'FAQ', id: 'faq' },
+  { label: 'Contact', id: 'contact' },
 ];
 
 export default function Header() {
@@ -27,6 +27,12 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    e.preventDefault();
+    setMobileOpen(false);
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-[#080808]/85 backdrop-blur-xl border-b border-white/[0.06] ${
@@ -40,7 +46,8 @@ export default function Header() {
             {leftNav.map((item) => (
               <a
                 key={item.label}
-                href={item.href}
+                href={`#${item.id}`}
+                onClick={(e) => handleNavClick(e, item.id)}
                 className="text-sm text-white font-medium tracking-wide py-2 rounded-lg hover:bg-white/[0.06] transition-all duration-300"
               >
                 {item.label}
@@ -64,7 +71,8 @@ export default function Header() {
             {rightNav.map((item) => (
               <a
                 key={item.label}
-                href={item.href}
+                href={`#${item.id}`}
+                onClick={(e) => handleNavClick(e, item.id)}
                 className="text-sm text-white font-medium tracking-wide py-2 rounded-lg hover:bg-white/[0.06] transition-all duration-300"
               >
                 {item.label}
@@ -93,8 +101,8 @@ export default function Header() {
             {[...leftNav, ...rightNav].map((item) => (
               <a
                 key={item.label}
-                href={item.href}
-                onClick={() => setMobileOpen(false)}
+                href={`#${item.id}`}
+                onClick={(e) => handleNavClick(e, item.id)}
                 className="block py-3 text-base text-white font-medium hover:bg-white/[0.06] rounded-lg px-3 transition-all"
               >
                 {item.label}

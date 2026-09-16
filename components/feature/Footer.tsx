@@ -1,12 +1,19 @@
+'use client';
+
 const footerNav = [
-  { label: 'About', href: '#about' },
-  { label: 'Services', href: '#services' },
-  { label: 'Testimonials', href: '#testimonials' },
-  { label: 'FAQ', href: '#faq' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'About', id: 'about' },
+  { label: 'Services', id: 'services' },
+  { label: 'Testimonials', id: 'testimonials' },
+  { label: 'FAQ', id: 'faq' },
+  { label: 'Contact', id: 'contact' },
 ];
 
 export default function Footer() {
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    e.preventDefault();
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
   return (
     <footer id="contact" className="bg-black relative">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" />
@@ -39,7 +46,8 @@ export default function Footer() {
               {footerNav.map((item) => (
                 <li key={item.label}>
                   <a
-                    href={item.href}
+                    href={`#${item.id}`}
+                    onClick={(e) => handleNavClick(e, item.id)}
                     className="group flex items-center gap-2 text-white text-sm hover:text-white transition-colors duration-200"
                   >
                     <span className="w-0 group-hover:w-1 h-px bg-white/40 transition-all duration-300" />
@@ -85,10 +93,7 @@ export default function Footer() {
           <p className="text-white text-xs">
             &copy; 2026 Eric Analytics. All rights reserved.
           </p>
-          {/* <div className="flex gap-8 text-white text-xs">
-            <span className="hover:text-white/65 cursor-pointer transition-colors">Privacy Policy</span>
-            <span className="hover:text-white/65 cursor-pointer transition-colors">Terms of Service</span>
-          </div> */}
+          
         </div>
       </div>
     </footer>

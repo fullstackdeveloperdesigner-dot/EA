@@ -282,7 +282,7 @@ export default function ContactSection() {
                   </>
                 ) : (
                   <>
-                    Fix Your Tracking Setup
+                    Send Message
                     <i className="ri-arrow-right-line" />
                   </>
                 )}
