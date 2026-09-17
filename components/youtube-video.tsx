@@ -15,29 +15,23 @@ const YouTubeVideo = () => {
       {/* Responsive 16:9 box — scales with container width on every screen size */}
       <div className="relative w-full aspect-video rounded-2xl overflow-hidden bg-black">
         {!isVideoOpen && (
-          <>
+          <button
+            type="button"
+            onClick={handleVideoClick}
+            aria-label="Play video"
+            className="group absolute inset-0 w-full h-full cursor-pointer"
+          >
             <Image
               src="/images/eric-analytics/Ideal_Partner.png"
               alt="Eric Case YouTube Video Thumbnail"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover cursor-pointer"
-              onClick={handleVideoClick}
+              className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
               priority
             />
-            {/* Play button overlay */}
-            <button
-              type="button"
-              onClick={handleVideoClick}
-              aria-label="Play video"
-              className="absolute inset-0 flex items-center justify-center group cursor-pointer"
-            >
-              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300" />
-              <div className="relative w-16 h-16 rounded-full bg-white/90 flex items-center justify-center shadow-2xl transition-transform duration-300 group-hover:scale-110">
-                <i className="ri-play-fill text-2xl text-[#080808] translate-x-0.5" />
-              </div>
-            </button>
-          </>
+            {/* subtle dim on hover only — no extra icon, thumbnail already has its own play icon */}
+            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
+          </button>
         )}
 
         {isVideoOpen && (
