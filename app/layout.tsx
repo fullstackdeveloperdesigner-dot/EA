@@ -14,7 +14,7 @@ export const metadata: Metadata = {
       'Eric Analytics fixes tracking foundations before scaling campaigns. Specialists in GA4, Google Tag Manager, Server-Side Tracking, and Conversion Optimization.',
     type: 'website',
     url: 'https://ericanalytics.net/',
-    images: ['https://ericanalytics.net/images/eric-analytics/og-image.png'],
+    images: ['/images/eric-analytics/og-image.png'],
   },
 };
 

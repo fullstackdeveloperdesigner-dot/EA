@@ -1,4 +1,5 @@
 'use client';
+
 import { useState } from 'react';
 import Image from 'next/image';
 
@@ -10,42 +11,43 @@ const YouTubeVideo = () => {
   };
 
   return (
-    <div className="col-lg-6 mb-4 youtube-video">
-      <div style={{ position: 'relative', height: '345px' }}>
-          <Image
-            src="/images/eric-analytics/Ideal_Partner.png"
-            alt="Eric Case YouTube Video Thumbnail"
-            width={614}
-            height={345}
-            style={{
-              width: '100%',
-              height: '100%',
-              position: 'absolute',
-              top: 0,
-              left: 0,
-              cursor: 'pointer',
-            }}
-            onClick={handleVideoClick}
-          />
-
+    <div className="w-full youtube-video">
+      {/* Responsive 16:9 box — scales with container width on every screen size */}
+      <div className="relative w-full aspect-video rounded-2xl overflow-hidden bg-black">
+        {!isVideoOpen && (
+          <>
+            <Image
+              src="/images/eric-analytics/Ideal_Partner.png"
+              alt="Eric Case YouTube Video Thumbnail"
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover cursor-pointer"
+              onClick={handleVideoClick}
+              priority
+            />
+            {/* Play button overlay */}
+            <button
+              type="button"
+              onClick={handleVideoClick}
+              aria-label="Play video"
+              className="absolute inset-0 flex items-center justify-center group cursor-pointer"
+            >
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300" />
+              <div className="relative w-16 h-16 rounded-full bg-white/90 flex items-center justify-center shadow-2xl transition-transform duration-300 group-hover:scale-110">
+                <i className="ri-play-fill text-2xl text-[#080808] translate-x-0.5" />
+              </div>
+            </button>
+          </>
+        )}
 
         {isVideoOpen && (
           <iframe
-          width="100%"
-          height="345"
-          src="https://www.youtube.com/embed/5cJOeSlWZ7Y?autoplay=1&rel=0"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-          title="YouTube Video"
-          style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            display: 'block',
-          }}
-        ></iframe>
-
+            className="absolute inset-0 w-full h-full"
+            src="https://www.youtube.com/embed/5cJOeSlWZ7Y?autoplay=1&rel=0"
+            title="YouTube Video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
         )}
       </div>
     </div>
