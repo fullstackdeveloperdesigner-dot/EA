@@ -4,17 +4,17 @@ import './globals.css';
 export const metadata: Metadata = {
   title: 'Leading Data & Web Analytics Services | Eric Analytics',
   description:
-    'Eric Analytics fixes tracking foundations before scaling campaigns. Specialists in GA4, Google Tag Manager, Server-Side Tracking, and Conversion Optimization for eCommerce, SaaS, and lead generation businesses.',
+    'Google Analytics, Tag Manager, Looker Studio, and Conversion Optimization Services.',
   icons: {
     icon: '/images/eric-analytics/favicon.ico',
   },
   openGraph: {
     title: 'Leading Data & Web Analytics Services | Eric Analytics',
     description:
-      'Eric Analytics fixes tracking foundations before scaling campaigns. Specialists in GA4, Google Tag Manager, Server-Side Tracking, and Conversion Optimization.',
+      'Google Analytics, Tag Manager, Looker Studio, and Conversion Optimization Services.',
     type: 'website',
     url: 'https://ericanalytics.net/',
-    images: ['/images/eric-analytics/og-image.png'],
+    images: ['https://ericanalytics.net/images/eric-analytics/og-image.png'],
   },
 };
 
